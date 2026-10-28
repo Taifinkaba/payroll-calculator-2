@@ -28,7 +28,11 @@ public class PayrollCalculator {
                 double hoursWorked = Double.parseDouble(tokens[2].trim());
                 double payRate = Double.parseDouble(tokens[3].trim());
 
+                // create values
+                Employee employee = new Employee(employeeId, name, hoursWorked, payRate);
 
+                // display payroll info
+                System.out.printf("Id: %d, Name: %s, Gross Pay: $%.2f%n", employee.getEmployeeId(), employee.getName(), employee.getGrossPay());
             }
 
             // close the reader
