@@ -16,6 +16,18 @@ public class PayrollCalculator {
 
             // while loop: as long as it is not null do this
             while (input != null){
+                // skip empty lines
+                if(input.trim().equals("")) continue;
+
+                // split and seperate at each |
+                String[] tokens = input.split("\\|");
+
+                // convert each part to proper type
+                int employeeId = Integer.parseInt(tokens[0].trim());
+                String name = tokens[1].trim();
+                double hoursWorked = Double.parseDouble(tokens[2].trim());
+                double payRate = Double.parseDouble(tokens[3].trim());
+
 
             }
 
